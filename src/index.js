@@ -1,5 +1,6 @@
 const FileApp = require('./app')
-const Table = require('../models/SetDB')
+require('../models/SetDB')
+require('../routes/RoutesRestaurantes')
 
 FileApp.App.listen(process.env.PORT ,()=>{
     console.log('Aplicação rodando...'+`${process.env.PORT}`)

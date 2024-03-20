@@ -1,4 +1,3 @@
-
 const Table = require('../models/SetDB')
 
 function ExibeRestaurantes(req,res){
@@ -32,3 +31,5 @@ function AtualizaRestaurantes(req,res){
     Table.Restaurantes.update({foto,nome,endereço,horário,produtos},{where: {nome: NameRestaurant}})
     res.sendStatus(200)
 }
+
+module.exports = {ExibeRestaurantes,ExibeRestaurantesPeloNome,AddRestaurantes,DeletaRestaurantesPeloNome,AtualizaRestaurantes}

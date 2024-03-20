@@ -21,8 +21,4 @@ const Restaurantes = DB.sequelize.define(TableName,{
     },
 })
 
-for(count = 0;count<1;count++){
-    Restaurantes.sync({force: true})
-}
-
 module.exports = {Restaurantes}
