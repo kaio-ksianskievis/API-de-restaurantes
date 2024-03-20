@@ -1,4 +1,4 @@
-const DB = require('./ConectionBD')
+const DB = require('./ConectionDB')
 const FileApp = require('../src/app')
 let count;
 const TableName = process.env.TABLE_NAME
