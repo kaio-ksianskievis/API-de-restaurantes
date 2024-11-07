@@ -1,9 +1,9 @@
 const DB = require('./ConectionDB')
-const FileApp = require('../src/app')
+const FileApp = require('../src/app');
+const { FORCE } = require('sequelize/lib/index-hints');
 let count;
-const TableName = process.env.TABLE_NAME
 
-const Restaurantes = DB.sequelize.define(TableName,{
+const Restaurantes = DB.sequelize.define("Mytable",{
     foto:{
         type: FileApp.Sequelizer.STRING
     },
@@ -20,5 +20,5 @@ const Restaurantes = DB.sequelize.define(TableName,{
         type: FileApp.Sequelizer.STRING
     },
 })
-
+Restaurantes.sync({force: false})
 module.exports = {Restaurantes}

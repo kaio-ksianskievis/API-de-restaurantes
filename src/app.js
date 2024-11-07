@@ -1,4 +1,3 @@
-require('dotenv').config({path: '../.env'})
 
 const Sequelizer = require('sequelize')
 const BodyParser = require('body-parser')
